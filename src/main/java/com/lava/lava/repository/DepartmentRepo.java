@@ -12,5 +12,6 @@ import java.util.Optional;
 public interface DepartmentRepo extends JpaRepository<Department,Long> {
 
     List<Department> findByCompany(Company company);
+
     Optional<Department> findByName(String name);
 }
