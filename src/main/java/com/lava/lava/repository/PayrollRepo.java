@@ -15,5 +15,5 @@ public interface PayrollRepo extends JpaRepository<Payroll,Long> {
     //find b companyid
     List<Payroll> findByCompanyId(Long companyId);
     //find by PayrollStatus
-    List<Payroll> findByPayrollStatus(PayrollStatus payrollStatus);
+    List<Payroll> findByStatus(PayrollStatus payrollStatus);
 }

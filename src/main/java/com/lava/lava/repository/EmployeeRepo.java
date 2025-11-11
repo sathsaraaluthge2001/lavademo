@@ -1,7 +1,6 @@
 package com.lava.lava.repository;
 
-import com.lava.lava.entity.Employee;
-import com.lava.lava.entity.Role;
+import com.lava.lava.entity.*;
 import com.lava.lava.enums.ContractType;
 import com.lava.lava.enums.EmployeeStatus;
 import com.lava.lava.enums.PayrollStatus;
@@ -15,13 +14,13 @@ import java.util.Optional;
 public interface EmployeeRepo extends JpaRepository<Employee,Long> {
 
     //find by employeeeid
-    List<Employee> findByCompanyId(Long companyId);
+    List<Employee> findByCompanyId(Company company);
     //find By departmentId
-    List<Employee> findByDepartment(Long departmentId);
+    List<Employee> findByDepartment(Department department);
     //find By designationId
-    List<Employee> findByDesignation(Long designationId);
+    List<Employee> findByDesignation(Designation designation);
     //find by employee Status
-    List<Employee> findByEmployeeStatus(EmployeeStatus employeeStatus);
+    List<Employee> findByStatus(EmployeeStatus status);
     //find ContractType
     List<Employee> findByContractType(ContractType contractType);
 

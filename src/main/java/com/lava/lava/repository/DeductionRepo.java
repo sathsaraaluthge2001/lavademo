@@ -10,6 +10,6 @@ import java.util.List;
 @Repository
 public interface DeductionRepo extends JpaRepository<Deduction, Long> {
 
-    List<Deduction> findByCompany(Employee employee);
+    List<Deduction> findByEmployee(Employee employee);
 
 }
